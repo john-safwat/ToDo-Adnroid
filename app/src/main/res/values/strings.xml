@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ToDo Android</string>
+    <string name="todo_icon">TODO Icon</string>
 </resources>
