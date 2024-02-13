@@ -32,11 +32,3 @@ Feel free to contribute to this project by proposing pull requests with bug fixe
 This project is licensed under the MIT License. See the LICENSE.md file for details.
 
 **Let's conquer your day together!**
-
-**Additional Notes:**
-
-* Remember to replace `your-username` with your actual GitHub username.
-* Create the CONTRIBUTING.md and LICENSE.md files as needed.
-* You can add screenshots or a link to your app store listing for visual appeal.
-* Consider translating the README for a wider audience.
-
