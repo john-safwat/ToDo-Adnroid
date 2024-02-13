@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="app_style">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="logoImage" format="reference"/>
+        <attr name="creditsImage" format="reference"/>
+        <attr name="appBarColor" format="color"/>
+        <attr name="appBarTextColor" format="color"/>
+        <attr name="cardBackgroundColor" format="color"/>
+        <attr name="onCardColor" format="color"/>
+        <attr name="onDoneColor" format="color"/>
+        <attr name="textHead1" format="reference"/>
+    </declare-styleable>
+
+</resources>
