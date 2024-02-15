@@ -10,6 +10,9 @@
         <item name="cardBackgroundColor">@color/white</item>
         <item name="onCardColor">@color/blue</item>
         <item name="onDoneColor">@color/green</item>
+        <item name="bottomNavigationBarSelectedItemColor">@color/blue</item>
+        <item name="bottomNavigationBarUnSelectedItemColor">@color/gray</item>
+        <item name="bottomNavigationBarBackgroundColor">@color/white</item>
     </style>
 
     <style name="headTextStyle" parent="Theme.ToDoAndroid">

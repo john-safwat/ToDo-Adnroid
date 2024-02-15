@@ -11,6 +11,9 @@
         <attr name="onCardColor" format="color"/>
         <attr name="onDoneColor" format="color"/>
         <attr name="textHead1" format="reference"/>
+        <attr name="bottomNavigationBarSelectedItemColor" format="color"/>
+        <attr name="bottomNavigationBarUnSelectedItemColor" format="color"/>
+        <attr name="bottomNavigationBarBackgroundColor" format="color"/>
     </declare-styleable>
 
 </resources>

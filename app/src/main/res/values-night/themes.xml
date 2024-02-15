@@ -10,6 +10,9 @@
         <item name="cardBackgroundColor">@color/light_black</item>
         <item name="onCardColor">@color/blue</item>
         <item name="onDoneColor">@color/green</item>
+        <item name="bottomNavigationBarSelectedItemColor">@color/blue</item>
+        <item name="bottomNavigationBarUnSelectedItemColor">@color/white</item>
+        <item name="bottomNavigationBarBackgroundColor">@color/light_black</item>
     </style>
 
 

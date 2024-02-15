@@ -2,19 +2,19 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?attr/backgroundColor">
 
-    <View
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu"
         android:layout_width="match_parent"
-        android:background="?attr/appBarColor"
-        android:layout_height="120dp"/>
-
-    <TextView
-        android:text="John Safwat"
-        style="@style/headTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
+        app:labelVisibilityMode="unlabeled"
+        android:padding="10dp"
+        app:itemIconSize="30dp"
+        app:backgroundTint="?attr/bottomNavigationBarBackgroundColor"
+        app:itemIconTint="@color/bottom_navigation_bar_colors"
+        android:layout_height="wrap_content"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
