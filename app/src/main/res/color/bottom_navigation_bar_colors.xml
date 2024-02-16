@@ -5,4 +5,6 @@
     <item android:color="?attr/bottomNavigationBarSelectedItemColor" android:state_active="true"/>
     <item android:color="?attr/bottomNavigationBarUnSelectedItemColor" android:state_checked="false"/>
     <item android:color="?attr/bottomNavigationBarSelectedItemColor" android:state_hovered="true"/>
+    <item android:color="?attr/bottomNavigationBarSelectedItemColor" android:state_focused="true"/>
+    <item android:color="?attr/bottomNavigationBarSelectedItemColor" android:state_pressed="true"/>
 </selector>
