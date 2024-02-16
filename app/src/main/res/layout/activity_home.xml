@@ -5,16 +5,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?attr/backgroundColor">
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_gravity="bottom"
-        app:menu="@menu/bottom_navigation_menu"
+    <com.google.android.material.bottomappbar.BottomAppBar
         android:layout_width="match_parent"
-        app:labelVisibilityMode="unlabeled"
-        android:padding="10dp"
-        app:itemIconSize="30dp"
-        app:backgroundTint="?attr/bottomNavigationBarBackgroundColor"
-        app:itemIconTint="@color/bottom_navigation_bar_colors"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:elevation="0dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:elevation="0dp"
+            android:padding="10dp"
+            app:backgroundTint="?attr/bottomNavigationBarBackgroundColor"
+            app:elevation="0dp"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="10dp"
+            app:itemIconSize="30dp"
+            app:itemIconTint="@color/bottom_navigation_bar_colors"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_navigation_menu" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/app_name"
+        app:backgroundTint="@color/black"
+        android:layout_gravity="top|center"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/white"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
