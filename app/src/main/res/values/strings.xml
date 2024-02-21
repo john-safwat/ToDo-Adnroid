@@ -3,4 +3,5 @@
     <string name="todo_icon">TODO Icon</string>
     <string name="home">Home</string>
     <string name="setting">Setting</string>
+    <string name="to_do_list">To Do List</string>
 </resources>
