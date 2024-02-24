@@ -10,6 +10,8 @@ import com.john.todoandroid.databinding.ItemDateCardBinding
 
 class TasksListRecyclerView(
     private var dateList: MutableList<CalenderDate>,
+    private var selectedItemPos: Int = 0,
+    private var oldPos: Int = 0
 ) : RecyclerView.Adapter<TasksListRecyclerView.ViewHolder>() {
 
     class ViewHolder(var viewBinding: ItemDateCardBinding) :
@@ -36,19 +38,23 @@ class TasksListRecyclerView(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         holder.bind(dateList[position])
+        holder.viewBinding.textViewDayName.setTextColor(Color.parseColor("#000000"))
+        holder.viewBinding.textViewDayNumber.setTextColor(Color.parseColor("#000000"))
+
+        if(selectedItemPos == position){
+            holder.viewBinding.textViewDayName.setTextColor(Color.parseColor("#5D9CEC"))
+            holder.viewBinding.textViewDayNumber.setTextColor(Color.parseColor("#5D9CEC"))
+        }
+
         onItemClickListener.let {
             holder.itemView.setOnClickListener {
+                oldPos = selectedItemPos
+                selectedItemPos = position
                 onItemClickListener?.onClickListener(dateList[position], position)
-                dateList[position].selected = !dateList[position].selected
-                if(dateList[position].selected){
-                    holder.viewBinding.textViewDayName.setTextColor(Color.parseColor("#5D9CEC"))
-                    holder.viewBinding.textViewDayNumber.setTextColor(Color.parseColor("#5D9CEC"))
-                }else {
-                    holder.viewBinding.textViewDayName.setTextColor(Color.parseColor("#000000"))
-                    holder.viewBinding.textViewDayNumber.setTextColor(Color.parseColor("#000000"))
-                }
-
+                notifyItemChanged(position)
+                notifyItemChanged(oldPos)
             }
         }
     }
