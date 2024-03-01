@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.john.todoandroid.Models.CalenderDate
-import com.john.todoandroid.R
 import com.john.todoandroid.databinding.ItemDateCardBinding
 
 class TasksListRecyclerView(
@@ -42,10 +41,12 @@ class TasksListRecyclerView(
         holder.bind(dateList[position])
         holder.viewBinding.textViewDayName.setTextColor(Color.parseColor("#000000"))
         holder.viewBinding.textViewDayNumber.setTextColor(Color.parseColor("#000000"))
+        holder.viewBinding.cardDateItem.elevation = 0.0F
 
         if(selectedItemPos == position){
             holder.viewBinding.textViewDayName.setTextColor(Color.parseColor("#5D9CEC"))
             holder.viewBinding.textViewDayNumber.setTextColor(Color.parseColor("#5D9CEC"))
+            holder.viewBinding.cardDateItem.elevation = 20.0F
         }
 
         onItemClickListener.let {
@@ -53,8 +54,8 @@ class TasksListRecyclerView(
                 oldPos = selectedItemPos
                 selectedItemPos = position
                 onItemClickListener?.onClickListener(dateList[position], position)
-                notifyItemChanged(position)
                 notifyItemChanged(oldPos)
+                notifyItemChanged(position)
             }
         }
     }

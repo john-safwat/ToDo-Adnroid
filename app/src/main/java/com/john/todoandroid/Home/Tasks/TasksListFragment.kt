@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import com.john.todoandroid.Database.TasksDatabase
 import com.john.todoandroid.Models.CalenderDate
 import com.john.todoandroid.databinding.FragmentTaskListBinding
 import java.time.LocalDate
@@ -22,7 +23,7 @@ class TasksListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View{
         viewBinding = FragmentTaskListBinding.inflate(inflater, container, false);
         initRecyclerView()
         return viewBinding.root
