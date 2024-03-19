@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.john.todoandroid.Models.CalenderDate
 import com.john.todoandroid.databinding.ItemDateCardBinding
 
-class TasksListRecyclerView(
+class DaysListRecyclerView(
     private var dateList: MutableList<CalenderDate>,
     private var selectedItemPos: Int = 0,
     private var oldPos: Int = 0
-) : RecyclerView.Adapter<TasksListRecyclerView.ViewHolder>() {
+) : RecyclerView.Adapter<DaysListRecyclerView.ViewHolder>() {
 
     class ViewHolder(var viewBinding: ItemDateCardBinding) :
         RecyclerView.ViewHolder(viewBinding.root) {
