@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import com.john.todoandroid.Database.TasksDatabase
 import com.john.todoandroid.Models.CalenderDate
 import com.john.todoandroid.databinding.FragmentTaskListBinding
 import java.time.LocalDate
@@ -16,7 +15,7 @@ import java.time.LocalDate
 class TasksListFragment : Fragment() {
 
     private lateinit var viewBinding: FragmentTaskListBinding
-    private lateinit var adapter: TasksListRecyclerView
+    private lateinit var adapter: DaysListRecyclerView
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
@@ -31,9 +30,9 @@ class TasksListFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun initRecyclerView() {
-        adapter = TasksListRecyclerView(createListOfCalender())
+        adapter = DaysListRecyclerView(createListOfCalender())
         adapter.onItemClickListener =
-            TasksListRecyclerView.OnItemClickListener { calenderDate, position ->
+            DaysListRecyclerView.OnItemClickListener { calenderDate, position ->
                     Log.e("Date" ,calenderDate.date.toString())
             }
         viewBinding.dateItemsRecyclerview.adapter = adapter

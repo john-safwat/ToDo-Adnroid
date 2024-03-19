@@ -19,7 +19,12 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initView() {
         homeBinding = ActivityHomeBinding.inflate(layoutInflater)
+        setUpFloatingActionButton()
         setContentView(homeBinding.root)
+    }
+
+    private fun setUpFloatingActionButton() {
+        //Todo to be implemented
     }
 
     private fun setSelectedFragment() {
